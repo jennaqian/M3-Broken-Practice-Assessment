@@ -3,13 +3,28 @@
 **Once you identify a bug, before you fix it, answer the following:**
 
 1. How did I know there was a problem? List all of the available information (Cypress assertion error? Failed to compile? JavaScript error message? Is there a line number? Something not rendering correctly in the browser?)
+
+- The error was failed to compile, the msg told us which line the error was on in App.js
+- Error: You should not use <Link> outside a <Router>
+- Error: Cannot read property 'name of undefined 
+
 1. Based on the information I have (error message, assertion error, line number, etc) :
    - What is the most likely cause for the bug? Why is this a good possible explanation?
    - Where should I start looking for the bug?
 
+- Looks like we are missing a closing tag in <Route />
+- Look in index.js where we will need to add BrowserRouter, to wrap around App component
+- The bug is possibly in the state! 
+
 **Once you've fixed the bug, answer the following:**
 
 1. Describe the steps you took to identify the problem.
+
+- We added the closing tag to <Route /> and that resolved the error msg. 
+- For the second error msg, we imported BroswerRouter and wrapped it around App component 
+
+
+
 
 # Example bug
 
@@ -19,6 +34,7 @@
 1. Based on this information:
    - I think one of my variables is undefined when I don't expect it to be
    - I want to find the variable that is undefined - I'll start looking at line 7 of PokemonCard.js
+
 
 **After Fixing**
 

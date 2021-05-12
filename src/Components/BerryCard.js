@@ -1,10 +1,10 @@
 import React from "react";
 
-const BerryCard = ({ berry }) => {
+const BerryCard = ({ currentBerry }) => {
   return (
     <div>
-      <h2>{berry}</h2>
-      <h2>{berry.name}</h2>
+      <h2>{currentBerry.name}</h2>
+      <h2>{currentBerry.firmness.name}</h2>
     </div>
   );
 };

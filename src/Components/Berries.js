@@ -30,7 +30,9 @@ class Berries extends Component {
 
   getBerries = async () => {
     const { data } = await axios.get("https://pokeapi.co/api/v2/berry/");
-    this.setState({ berries: data.results });
+    this.setState({ 
+      berries: data.results 
+    });
   };
 
   componentDidMount() {
