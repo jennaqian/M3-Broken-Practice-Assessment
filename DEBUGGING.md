@@ -7,6 +7,7 @@
 - The error was failed to compile, the msg told us which line the error was on in App.js
 - Error: You should not use <Link> outside a <Router>
 - Error: Cannot read property 'name of undefined 
+- Error: img in navbar wont pass in cypress 
 
 1. Based on the information I have (error message, assertion error, line number, etc) :
    - What is the most likely cause for the bug? Why is this a good possible explanation?
@@ -15,6 +16,7 @@
 - Looks like we are missing a closing tag in <Route />
 - Look in index.js where we will need to add BrowserRouter, to wrap around App component
 - The bug is possibly in the state! 
+- Look in Navbar.js for the css error 
 
 **Once you've fixed the bug, answer the following:**
 
@@ -22,6 +24,8 @@
 
 - We added the closing tag to <Route /> and that resolved the error msg. 
 - For the second error msg, we imported BroswerRouter and wrapped it around App component 
+- BerryCard was trying to access a prop that was never passed, and it was accessing the wrong prop. Rendering an object made an error appear, resolved it by specifying .name and .firmness
+- style in img tag was missing a width
 
 
 

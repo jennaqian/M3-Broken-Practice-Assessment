@@ -35,6 +35,7 @@ class Pokemon extends Component {
       this.setState({
         currentPokemon: {},
         searchPokemon: "",
+        isError: !this.state.isError,
       });
     }
   };
@@ -53,7 +54,10 @@ class Pokemon extends Component {
           />
           <button>Submit</button>
         </form>
-        <PokemonCard pokemon={currentPokemon} />
+        {/* <PokemonCard pokemon={currentPokemon} /> */}
+        
+        {/* if currentPokemon have the initial property of spirtes, give me that img  */}
+        {currentPokemon.sprites && <PokemonCard pokemon={currentPokemon} />}
         {isError && <h2>Pokemon not found!</h2>}
       </div>
     );

@@ -56,6 +56,7 @@ class Berries extends Component {
           {options}
         </select>
         {currentBerry.firmness && <BerryCard currentBerry={currentBerry} />}
+        {/* if berry have firmess, give me berryCard  */}
       </div>
     );
   }
